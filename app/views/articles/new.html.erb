@@ -1,0 +1,18 @@
+<% if current_user %>
+<h1>New Article</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', articles_path %>
+
+<% else %>
+
+<h1>You must be loged in to write articles</h1>
+
+<%= link_to 'Click here to Signup', new_user_registration_path %> <br>
+
+Or
+<br>
+<%= link_to 'Click here to Sign In', new_user_session_path %>
+
+<% end %>

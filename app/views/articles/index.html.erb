@@ -17,7 +17,7 @@
       <tr>
         <td><%= article.user.username %></td>
         <td><%= article.titles %></td>
-        <td><%= article.body %></td>
+        <td><%= truncate(article.body) %></td>
         <td><%= link_to 'Show', article %></td>
         <td><%= link_to 'Edit', edit_article_path(article) %></td>
         <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,6 +25,9 @@
     <% end %>
   </tbody>
 </table>
+
+<%= render 'comments/comment' %>
+
 
 <br>
 
